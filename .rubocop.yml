@@ -1,0 +1,108 @@
+require:
+  - 'rubocop-performance'
+  - 'rubocop-rspec'
+  - 'rubocop-rails'
+
+AllCops:
+  TargetRubyVersion: 2.6.4
+  Exclude:
+    - 'db/**/*'
+    - 'config/**/*'
+    - 'bin/**/*'
+    - 'spec/support/*'
+    - 'spec/spec_helper.rb'
+    - 'spec/rails_helper.rb'
+    - 'db/seeds.rb'
+    - 'app/services/lab/**/*'
+
+  # Enabled by default
+  DisabledByDefault: false
+
+  # Get CopNames for easier fix.
+  DisplayCopNames: true
+
+  # Related style guide URL. )
+  DisplayStyleGuide: true
+
+Rails:
+  Enabled: true
+Rails/HasAndBelongsToMany:
+  Enabled: false
+Rails/SkipsModelValidations:
+  Enabled: false
+
+Style/AsciiComments:
+  Description: 'Use only ascii symbols in comments.'
+  StyleGuide: 'https://github.com/bbatsov/ruby-style-guide#english-comments'
+  Enabled: false
+
+Style/Documentation:
+  Enabled: false
+
+Style/EmptyMethod:
+  Enabled: false
+
+Style/RegexpLiteral:
+  Enabled: false
+
+Style/FrozenStringLiteralComment:
+  Enabled: false
+
+Metrics/BlockLength:
+  Enabled: true
+  Exclude:
+    - spec/*
+    - 'spec/**/*.rb'
+    - lib/tasks/*
+Metrics/CyclomaticComplexity:
+  Max: 10
+Metrics/ClassLength:
+  Enabled: true
+  Max: 200
+Style/BlockDelimiters:
+  Enabled: false
+Layout/LineLength:
+  Max: 150
+Metrics/AbcSize:
+  Enabled: true
+  Max: 30
+
+Metrics/MethodLength:
+  Enabled: true
+  Max: 20
+  Exclude:
+    - lib/vaultid/signature_service.rb
+
+RSpec/ExampleLength:
+  Max: 20
+
+RSpec/DescribeClass:
+  Exclude:
+    - spec/lib/tasks/*
+
+RSpec/NestedGroups:
+  Max: 5
+
+RSpec/AnyInstance:
+  Exclude:
+
+Style/HashEachMethods:
+  Enabled: true
+
+Style/HashTransformKeys:
+  Enabled: true
+
+Style/HashTransformValues:
+  Enabled: true
+RSpec/FilePath:
+  Enabled: false
+Style/AccessModifierDeclarations:
+  Enabled: false
+Rails/FilePath:
+   Enabled: false
+RSpec/LeakyConstantDeclaration:
+  Enabled: false
+RSpec/EmptyExampleGroup:
+  Enabled: false
+RSpec/ScatteredSetup:
+  Enabled: false
