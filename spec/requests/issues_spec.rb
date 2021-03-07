@@ -10,8 +10,8 @@ RSpec.describe "Issues", type: :request do
 
       it do
         expect(response).to have_http_status(:ok)
-        expect(JSON.parse(response).lenght).to eq(1)
-        expect(JSON.parse(response)[0]["data"]["issue"]["number"]).to eq(1)
+        expect(JSON.parse(response.body).length).to eq(1)
+        expect(JSON.parse(response.body)[0]["data"]["issue"]["number"]).to eq(1)
       end
     end
 
@@ -22,7 +22,7 @@ RSpec.describe "Issues", type: :request do
       
       it do
         expect(response).to have_http_status(:ok)
-        expect(JSON.parse(response).lenght).to eq(0)
+        expect(JSON.parse(response.body).length).to eq(0)
       end
     end
   end
