@@ -4,7 +4,7 @@ require:
   - 'rubocop-rails'
 
 AllCops:
-  TargetRubyVersion: 2.6.4
+  TargetRubyVersion: 3.0.0
   Exclude:
     - 'db/**/*'
     - 'config/**/*'
@@ -66,12 +66,6 @@ Layout/LineLength:
 Metrics/AbcSize:
   Enabled: true
   Max: 30
-
-Metrics/MethodLength:
-  Enabled: true
-  Max: 20
-  Exclude:
-    - lib/vaultid/signature_service.rb
 
 RSpec/ExampleLength:
   Max: 20
