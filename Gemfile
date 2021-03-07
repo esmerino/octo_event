@@ -32,6 +32,8 @@ group :development, :test do
   gem 'rspec-rails', '~> 4.1'
   # Factory Bot ♥ Rails
   gem 'factory_bot_rails'
+  gem 'rubocop-rails'
+  gem 'rubocop-rspec'
 end
 
 group :development do
